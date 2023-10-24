@@ -1,4 +1,4 @@
-# % Day Weather Forecaster
+# 5 Day Weather Forecaster
 
 ## Description
 The purpose of this project is to build a 5-day weather forecast app. The skills needed to excecute this webpage well include linking and modifying external server side API's. In this case, we have utilized the Google weather API.
