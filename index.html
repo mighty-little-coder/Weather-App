@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>5 Day Weather Forecaster</title>
-  <link rel="stylesheet" href="./assets/style.css">
-  <link rel="">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+
+  <header class="pageTitle">
+    <h1 class="title">Weather Forecaster</h1>
+    <h2 class="dateTime"></h2>
+    <h2 class="conditions"></h2>
+  </header>
+
+  <title class="todaysDate"></title>
+
+  <aside class="locationEl">
+    <h1 class="locationTitle"></h1>
+    <form id="locationTextBox"></form>
+    <button id="locationSearch">Search</button>
+  </aside>
+
+  <div class="locationHistoryEl">
+    <ul class="prevList">Previous Destinations
+      <li></li>
+    </ul>
+  </div>
+
+  <main class="weatherContainer">
+    <h3>Today</h3>
+    <section class="todayCards"></section>
+    <div class="todayIcon"></div>
+    <div class="todayWind">Wind Speed</div>
+    <div class="todayHumid">Humidity</div>
+    
+    <h4 id="forecast">5-Day Forecast</h4>
+    
+    <nav class="forecastCards">
+      <h5>Date</h5>
+      <div class="forcastInfo">
+        <ul>
+          <li id="forecastTemp">temp`f</li>
+          <li id="forecastWind">wind mph</li>
+          <li id="forecastHumid">humid %</li>
+        </ul>
+      </div>
+    </nav>
+
+  </main>
+
+
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
   <script src="./assets/script.js"></script>
 </body>
+
 </html>
