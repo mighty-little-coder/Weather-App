@@ -1,30 +1,53 @@
 // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-var dateIs = dayjs();
 var searchDest = document.querySelector("#locationTextBox");
-var setToday = document.querySelector("todaysDate");
 var searchSubmit = document.querySelector("#locationSearch");
-var pastDest = document.querySelector("#prevListLi");
+var locations = document.querySelector(".locationEl")
+var setToday = document.querySelector(".todaysDate");
+var pastDest = document.querySelector(".prevList");
+var destinationsArray = []
 
-
-function today() {
-  setToday.dateIs;
+function displayTime() {
+  var currentTime = dayjs().format('dddd MMM DD, YYYY');
+  setToday.textContent = currentTime;
 }
 
-function searchBtn() {
-  searchSubmit.addEventListener("submit", setDest);
-}
+displayTime();
+setInterval(displayTime, 1000);
 
-document.querySelector('form').onsubmit = function (e) {
-  e.preventDefault();
+function storeDest() {
   var dest = searchDest.value;
   localStorage.setItem("destination", JSON.stringify(dest));
+  console.log(dest);
   console.log(localStorage);
-  searchDest.value = "";
-  var previousDest = JSON.parse(localStorage.getItem("destination"));
-  var ul = document.querySelector("prevList");
-  previousDest.forEach(function(item) {
-    var prevDestEl = document.createElement("listItem");
-    listItem.appendChild(document.createTextNode(item));
-    prevList.appendChild(listItem);
-  });
 }
+
+function renderDest() {
+  pastDest.innerHTML = "";
+
+  for (var i = 0; i < destinationsArray.length; i++) {
+    var prevDestEl = destinationsArray[i];
+
+    var li = document.createElement("li");
+    li.textContent = pastDest;
+    li.setAttribute("data-index", i);
+
+    var listBtn = document.createElement("button");
+    listBtn.textContent = "Search";
+
+    li.appendChild(listBtn);
+    pastDest.appendChild(li);
+  }
+}
+
+locations.addEventListener("submit", function(event) {
+  event.preventDefault();
+  var dest = searchDest.value.trim();
+
+  destinationsArray.push(dest);
+  searchDest.value = "";
+
+  storeDest();
+  renderDest();
+});
+
+
