@@ -1,10 +1,15 @@
 // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+// api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+// var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+// fetch(queryURL)
+var APIkey = "3ac4c533f75c393e9ad9feff434508cf"
 var searchDest = document.querySelector("#locationTextBox");
 var searchSubmit = document.querySelector("#locationSearch");
 var locations = document.querySelector(".locationEl")
 var setToday = document.querySelector(".todaysDate");
 var pastDest = document.querySelector(".prevList");
 var destinationsArray = []
+var city;
 
 function displayTime() {
   var currentTime = dayjs().format('dddd MMM DD, YYYY');
@@ -39,7 +44,7 @@ function renderDest() {
   }
 }
 
-locations.addEventListener("submit", function(event) {
+locations.addEventListener("submit", function (event) {
   event.preventDefault();
   var dest = searchDest.value.trim();
 
