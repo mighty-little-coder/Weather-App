@@ -4,40 +4,83 @@ body {
 
 .pageTitle {
   display: flex;
+  margin-top: 50px;
   flex-direction: column;
   font-size: 2em;
 }
 
 .todaysDate {
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #locationTextBox {
   display: flex;
+  margin: 40px 0px 5px 30px;
   padding: 0px 80px 0px 0px;
 }
 
 #locationSearch {
   display: flex;
   padding: 0px 200px 0px 0px;
-  margin-bottom: 100px;
+  margin: 0px 0px 40px 30px;
 }
 
-.locationHistoryEl {
+/* .locationHistoryEl {
   display: flex;
+  margin: 35px 0px 5px 30px;
+  background-color: lightgray;
+  border-radius: 5px;
+} */
 
+.dividerBlock {
+  display: flex;
+  background-color: black;
 }
 
+.forecastCards ul {
+display: flex;
+flex-direction: column;
+}
 
+.forecastCards ul li {
+  display: flex;
+  flex-direction: column;
+  }
 
+#card1
+#card2
+#card3
+#card4
+#card5 {
+  display: flex;
+  flex-direction: column;
+}
 
+.forecast {
+  margin: 2% 15%;
+  background-color: aliceblue;
+  border-style: solid;
+  border-width: 1px black;
+  border-radius: 10px;
+  padding: 3%
+}
 
+.forecast h4 {
+  position: absolute;
+}
 
+.forecastCards {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  background-color: midnightblue;
+  
+}
