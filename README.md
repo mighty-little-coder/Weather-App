@@ -1,15 +1,9 @@
 # 5 Day Weather Forecaster
 
 ## Description
-The purpose of this project is to build a 5-day weather forecast app. The skills needed to excecute this webpage well include linking and modifying external server side API's. In this case, we have utilized the Google weather API.
+The purpose of this project is to build a 5-day weather forecast app. The skills needed to execute this webpage well include linking and modifying external server side API's. In this case, we have utilized the Google weather API.
 
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
 ## Installation
 
@@ -17,21 +11,34 @@ N/A
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+To access this project's deployed page, click this link!
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+To use this website, simply input a desired location you wish to see a 5-day forecast of the weather and press submit, or enter on your keyboard. You should then be faced with a 5-day forecast for that specific area as well as a tab for the current day's weather.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Along with the weather info, you should also see information on the humidity and wind speed.
+
+    ![Weather Forecaster homepage](./assets/images/Screenshot%20(34).png)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+# Collaborators
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+UCONN Coding Bootcamp Student - Ronald Martin
 
-If you followed tutorials, include links to those here as well.
+UCONN Coding Bootcamp Instructor - Mia Ciasullo 
+
+UCONN Coding Bootcamp Instructor - Lee Warrick
+
+# Links to online resources
+
+ChatGPT 3.5 - https://www.chat.openai.com/
+
+Normalize CSS - https://blog.hubspot.com/website/normalize-css
+
+MDN - https://developer.mozilla.org/en-US/
+
+W3Schools - https://www.w3schools.com/
+
 
 ## License
 
