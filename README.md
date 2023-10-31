@@ -11,7 +11,7 @@ N/A
 
 ## Usage
 
-To access this project's deployed page, click this link!
+To access this project's deployed page, click this <a href="https://mighty-little-coder.github.io/Weather-App/?">link!</a>
 
 To use this website, simply input a desired location you wish to see a 5-day forecast of the weather and press submit, or enter on your keyboard. You should then be faced with a 5-day forecast for that specific area as well as a tab for the current day's weather.
 
