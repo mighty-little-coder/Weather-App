@@ -17,7 +17,7 @@ To use this website, simply input a desired location you wish to see a 5-day for
 
 Along with the weather info, you should also see information on the humidity and wind speed.
 
-    ![Weather Forecaster homepage](./assets/images/Screenshot%20(34).png)
+![Weather Forecaster homepage](./assets/images/weather-dashboard.png)
 
 ## Credits
 
