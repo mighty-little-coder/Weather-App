@@ -9,11 +9,27 @@ body {
   font-size: 2em;
 }
 
+.weatherContainer h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .todaysDate {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+li#todayIcon,
+li#todayWind,
+li#todayWindArrow,
+li#todayHumid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .title {
   display: flex;
@@ -32,6 +48,8 @@ body {
   padding: 0px 200px 0px 0px;
   margin: 0px 0px 40px 30px;
 }
+
+/* NEED TO FIX SPACING WITH HISTORY */
 
 /* .locationHistoryEl {
   display: flex;
