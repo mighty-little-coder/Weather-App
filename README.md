@@ -1,7 +1,13 @@
 # 5 Day Weather Forecaster
 
+
+
 ## Description
-The purpose of this project is to build a 5-day weather forecast app. The skills needed to execute this webpage well include linking and modifying external server side API's. In this case, we have utilized the Google weather API.
+The purpose of this project is to build a 5-day weather forecast app. The skills needed to execute this webpage well include linking and modifying external server side API's. In this case, we have utilized the openWeather API.
+
+This project pushed me to learn how to properly tie-in APIs which i struggled with very much. Given the time, i Would like to improve the webpage greatly to look and function similar to the following screenshot.
+
+![Potential Future Design](./assets/images/Screenshot%20(33).png)
 
 
 
@@ -19,9 +25,11 @@ Along with the weather info, you should also see information on the humidity and
 
 ![Weather Forecaster homepage](./assets/images/weather-dashboard.png)
 
+
+
 ## Credits
 
-# Collaborators
+### Collaborators
 
 UCONN Coding Bootcamp Student - Ronald Martin
 
@@ -29,7 +37,7 @@ UCONN Coding Bootcamp Instructor - Mia Ciasullo
 
 UCONN Coding Bootcamp Instructor - Lee Warrick
 
-# Links to online resources
+### Links to online resources
 
 ChatGPT 3.5 - https://www.chat.openai.com/
 
@@ -40,7 +48,8 @@ MDN - https://developer.mozilla.org/en-US/
 W3Schools - https://www.w3schools.com/
 
 
-## License
+
+### License
 
 MIT License. See project repo for more information concerning the license.
 ---
