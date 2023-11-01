@@ -9,10 +9,11 @@ body {
   font-size: 2em;
 }
 
-.weatherContainer h3 {
+.cityName {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 
 .todaysDate {
@@ -22,6 +23,7 @@ body {
 }
 
 li#todayIcon,
+li#todayTemp,
 li#todayWind,
 li#todayWindArrow,
 li#todayHumid {
@@ -29,7 +31,6 @@ li#todayHumid {
   justify-content: center;
   align-items: center;
 }
-
 
 .title {
   display: flex;
