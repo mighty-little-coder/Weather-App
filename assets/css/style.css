@@ -2,6 +2,10 @@ body {
   background-color: lightblue;
 }
 
+.weatherContainer {
+  display: none;
+}
+
 .pageTitle {
   display: flex;
   margin-top: 50px;

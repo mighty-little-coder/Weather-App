@@ -37,6 +37,7 @@ UCONN Coding Bootcamp Instructor - Mia Ciasullo
 
 UCONN Coding Bootcamp Instructor - Lee Warrick
 
+
 ### Links to online resources
 
 ChatGPT 3.5 - https://www.chat.openai.com/

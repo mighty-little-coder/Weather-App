@@ -24,28 +24,34 @@ setInterval(displayTime, 1000);
 // Storing previously searched destinations in local storage
 function storeDest(dest) {
   localStorage.setItem("destination", dest);
-  // console.log(dest);
+  console.log(dest);
   // console.log(localStorage);
 }
 
 // Pulling previously searched destinations from local storage
-function renderPrevDest() {
-  pastDest.innerHTML = "";
+// function renderPrevDest() {
+//   pastDest.innerHTML = "";
 
-  for (var i = 0; i < destinationsArray.length; i++) {
-    var prevDestEl = destinationsArray[i];
+//   for (var i = 0; i < destinationsArray.length; i++) {
+//     var prevDestEl = destinationsArray[i];
 
-    var li = document.createElement("li");
-    li.textContent = pastDest;
-    li.setAttribute("data-index", i);
+//     var li = document.createElement("li");
+//     li.textContent = pastDest;
+//     li.setAttribute("data-index", i);
 
-    var listBtn = document.createElement("button");
-    listBtn.textContent = "Search";
+//     var listBtn = document.createElement("button");
+//     listBtn.textContent = "Search";
 
-    li.appendChild(listBtn);
-    pastDest.appendChild(li);
-  }
-}
+//     li.appendChild(listBtn);
+//     pastDest.appendChild(li);
+
+//     prevDestEl.forEach(function (item) {
+//       li.appendChild(document.createTextNode(item));
+//       ul.appendChild(li);
+//     });
+//   };
+// };
+
 
 // Renders current day info on page
 function renderCurrentDest(currentWeatherData) {
@@ -110,19 +116,92 @@ locations.addEventListener("submit", function (event) {
 
   console.log("Submitted")
 
+  document.querySelector(".weatherContainer").style.display = "block";
+
   var city = searchDest.value;
   storeDest(city);
 
+
+
   var APIKey = "3ac4c533f75c393e9ad9feff434508cf";
   var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + APIKey;
+  //
 
+  function renderPrevDest() {
+    var li = document.createElement("li");
+    li.textContent = searchDest.value;
+
+    pastDest.appendChild(li);
+
+    var listBtn = document.createElement("button");
+    listBtn.textContent = "Search";
+    listBtn.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      fetch(queryURL).then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+        .then(function (weatherData) {
+          renderCurrentDest(weatherData);
+          renderDestForecast(weatherData);
+
+        });
+      });
+
+    
+    li.appendChild(listBtn);
+    pastDest.appendChild(li);
+  }
+  
+  renderPrevDest();
+  
+  
   fetch(queryURL).then(function (response) {
     console.log(response);
     return response.json();
   })
-    .then(function (weatherData) {
-      renderCurrentDest(weatherData);
-      renderDestForecast(weatherData);
-    })
-
+  .then(function (weatherData) {
+    renderCurrentDest(weatherData);
+    renderDestForecast(weatherData);
+    
+  })
+  
 });
+
+
+
+
+//Function to create buttons instead of simple text.. unfunctional ATM
+
+
+// function renderPrevDestList() {
+//   var getPastDest = JSON.parse(localStorage.getItem("dest"))
+
+//   var listBtn = document.createElement("button")
+//   listBtn.setAttribute("id", destinationsArray)
+//   listBtn.setAttribute("style", "cursor: pointer")
+//   listBtn.addEventListener("click", function (event) {
+//     fetch(queryURL).then(function (response) {
+//       console.log(response);
+//       return response.json();
+//     })
+//       .then(function (weatherData) {
+//         renderCurrentDest(weatherData);
+//         renderDestForecast(weatherData);
+
+//       })
+//     searchDest.value = ""
+//   })
+  
+//   listBtn.textContent = destinationsArray[0]
+//   pastDest.appendChild(getPastDest);
+// // pastDest.textContent = destinationsArray[0]
+// //   pastDest.appendChild(getPastDest)
+//   destinationsArray = []
+
+//   //
+
+//   renderPrevDestList();
+
+// }
