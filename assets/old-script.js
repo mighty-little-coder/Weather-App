@@ -70,6 +70,8 @@ function renderCurrentDest(currentWeatherData) {
 
 // Renders forecasted info on page
 function renderDestForecast(currentWeatherData) {
+
+  //Input to add one day at a time to each forecast card
   var forecastDateEl = dayjs();
   var forecastDate1 = forecastDateEl.add(1, 'day');
   var forecastDate2 = forecastDateEl.add(2, 'day');
@@ -125,32 +127,17 @@ locations.addEventListener("submit", function (event) {
 
   var APIKey = "3ac4c533f75c393e9ad9feff434508cf";
   var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + APIKey;
-  //
 
   function renderPrevDest() {
-    var li = document.createElement("li");
+    var li = document.createElement("button");
     li.textContent = searchDest.value;
-
-    pastDest.appendChild(li);
-
-    var listBtn = document.createElement("button");
-    listBtn.textContent = "Search";
-    listBtn.addEventListener("submit", function (event) {
+    li.addEventListener("submit", function (event) {
       event.preventDefault();
+      // li.onclick(function(callback) {
 
-      fetch(queryURL).then(function (response) {
-        console.log(response);
-        return response.json();
-      })
-        .then(function (weatherData) {
-          renderCurrentDest(weatherData);
-          renderDestForecast(weatherData);
+      // })
+    });
 
-        });
-      });
-
-    
-    li.appendChild(listBtn);
     pastDest.appendChild(li);
   }
   
@@ -176,32 +163,56 @@ locations.addEventListener("submit", function (event) {
 
 
 // function renderPrevDestList() {
-//   var getPastDest = JSON.parse(localStorage.getItem("dest"))
-
-//   var listBtn = document.createElement("button")
-//   listBtn.setAttribute("id", destinationsArray)
-//   listBtn.setAttribute("style", "cursor: pointer")
-//   listBtn.addEventListener("click", function (event) {
-//     fetch(queryURL).then(function (response) {
-//       console.log(response);
-//       return response.json();
-//     })
-//       .then(function (weatherData) {
-//         renderCurrentDest(weatherData);
-//         renderDestForecast(weatherData);
-
-//       })
-//     searchDest.value = ""
-//   })
+  //   var getPastDest = JSON.parse(localStorage.getItem("dest"))
   
-//   listBtn.textContent = destinationsArray[0]
-//   pastDest.appendChild(getPastDest);
-// // pastDest.textContent = destinationsArray[0]
-// //   pastDest.appendChild(getPastDest)
-//   destinationsArray = []
+  //   var listBtn = document.createElement("button")
+  //   listBtn.setAttribute("id", destinationsArray)
+  //   listBtn.setAttribute("style", "cursor: pointer")
+  //   listBtn.addEventListener("click", function (event) {
+    //     fetch(queryURL).then(function (response) {
+      //       console.log(response);
+      //       return response.json();
+      //     })
+      //       .then(function (weatherData) {
+        //         renderCurrentDest(weatherData);
+        //         renderDestForecast(weatherData);
+        
+        //       })
+        //     searchDest.value = ""
+        //   })
+        
+        //   listBtn.textContent = destinationsArray[0]
+        //   pastDest.appendChild(getPastDest);
+        // // pastDest.textContent = destinationsArray[0]
+        // //   pastDest.appendChild(getPastDest)
+        //   destinationsArray = []
+        
+        //   //
+        
+        //   renderPrevDestList();
+        
+        // }
 
-//   //
 
-//   renderPrevDestList();
 
-// }
+
+        // 
+            // var listBtn = document.createElement("button");
+            // listBtn.textContent = li.textContent;
+            // listBtn.addEventListener("submit", function (event) {
+            //   event.preventDefault();
+        
+              // fetch(queryURL).then(function (response) {
+              //   console.log(response);
+              //   return response.json();
+              // })
+              //   .then(function (weatherData) {
+              //     renderCurrentDest(weatherData);
+              //     renderDestForecast(weatherData);
+        
+                // });
+              // });
+        
+            
+            // li.appendChild(listBtn);
+            // pastDest.appendChild(li);
