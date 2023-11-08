@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>5 Day Weather Forecaster</title>
   <link rel="stylesheet" href="./assets/css/normalize.css">
+  <!-- <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" /> -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -15,7 +18,9 @@
 
   <form class="locationEl">
     <h1 class="locationTitle">Search for a City</h1>
-    <input id="locationTextBox" type="text" required placeholder="Enter Location..."></input>
+    <!-- <div class="row"> -->
+    <input class="input-field offset- col s2" id="locationTextBox" type="text" required placeholder="Enter Location..."></input>
+  <!-- </div> -->
     <button id="locationSearch">Search</button>
   </form>
 
@@ -72,7 +77,7 @@
           <div class="forcastInfo3">
             <ul>
               <li id="forecastTemp3"></li>
-              <li id="forecastWind3"><li>
+              <li id="forecastWind3"></li>
               <li id="forecastHumid3"></li>
             </ul>
           </div>
@@ -103,6 +108,9 @@
     </div>
   </main>
 
+  <sub class="failToLoadMessage">
+    <p><span><strong>Invalid Input.</strong></span><br>Please provide a city name, followed by the full state name (not initials).</p>
+  </sub>
 
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
 
